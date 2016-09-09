@@ -21,8 +21,8 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
   host: localhost
-  username: ocmchile
-  password: oscar123
+  username: postgres
+  password: postgres
 
 development:
   <<: *default
@@ -84,5 +84,6 @@ test:
 production:
   <<: *default
   database: todoapp_production
-  username: todoapp
-  password: <%= ENV['TODOAPP_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: postgres
+  #password: <%= ENV['TODOAPP_DATABASE_PASSWORD'] %>
